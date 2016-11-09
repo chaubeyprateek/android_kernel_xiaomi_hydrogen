@@ -971,10 +971,10 @@ static ssize_t mdss_debug_perf_bw_limit_read(struct file *file,
 		temp_settings++;
 	}
 
-	if (len < 0)
+	if (len < 0 || len >= sizeof(buf))
 		return 0;
 
-	if (copy_to_user(buff, buf, len))
+	if ((count < sizeof(buf)) || copy_to_user(buff, buf, len))
 		return -EFAULT;
 
 	*ppos += len;	/* increase offset */
