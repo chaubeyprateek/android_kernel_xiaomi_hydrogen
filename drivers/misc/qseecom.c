@@ -3100,6 +3100,7 @@ static int __qseecom_update_cmd_buf_64(void *msg, bool cleanup,
 			pr_warn(" (%d) is greater than %d\n",
 				sg_ptr->nents, QSEECOM_MAX_SG_ENTRY);
 			if (cleanup) {
+                        goto err;
 				if (data->client.sec_buf_fd[i].is_sec_buf_fd &&
 					data->client.sec_buf_fd[i].vbase)
 					dma_free_coherent(qseecom.pdev,
@@ -3116,7 +3117,6 @@ static int __qseecom_update_cmd_buf_64(void *msg, bool cleanup,
 			}
 			len = QSEECOM_SG_LIST_BUF_HDR_SZ_64BIT;
 			sg = sg_ptr->sgl;
-			goto cleanup;
 		}
 		sg = sg_ptr->sgl;
 		if (sg_ptr->nents == 1) {
