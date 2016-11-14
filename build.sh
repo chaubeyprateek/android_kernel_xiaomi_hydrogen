@@ -23,8 +23,8 @@ Hyper_VER="$BASE_VER$VER$TC"
 # Vars
 export ARCH=arm64
 export SUBARCH=arm64
-export KBUILD_BUILD_USER=Karthick111
-export KBUILD_BUILD_HOST=server1
+export KBUILD_BUILD_USER=prateek
+export KBUILD_BUILD_HOST=hyperserver
 export LOCALVERSION="-Hyper™-v1"
 
 # Paths
