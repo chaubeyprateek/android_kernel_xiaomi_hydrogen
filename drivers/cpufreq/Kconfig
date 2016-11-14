@@ -123,7 +123,8 @@ config CPU_FREQ_DEFAULT_GOV_IMPULSE
 	select CPU_FREQ_GOV_IMPULSE
 	help
 	  Use the CPUFreq governor 'impulse' as default. This allows
-	  you to get a full dynamic cpu frequency capable system by simply
+	  you to get a full dynamic cpu frequency capable system by 
+simply
 	  loading your cpufreq low-level hardware driver, using the
 	  'impulse' governor for latency-sensitive workloads.
 
