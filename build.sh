@@ -25,7 +25,7 @@ export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER=prateek
 export KBUILD_BUILD_HOST=hyperserver
-export LOCALVERSION="-Hyper™-v1.1"
+export LOCALVERSION="-Hyper™-v2"
 
 # Paths
 KERNEL_DIR=`pwd`
